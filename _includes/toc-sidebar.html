@@ -1,0 +1,11 @@
+<aside class="privacy-toc">
+  <h2>Table of Contents</h2>
+  <nav class="toc-nav">
+    <ul>
+      {% for item in include.items %}
+      <li><a href="#{{ item.id }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>
+

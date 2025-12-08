@@ -1,0 +1,296 @@
+// Privacy Policy, Terms of Service, and TOC Page Styles
+.privacy-page,
+.terms-page,
+.toc-page {
+  .page-header {
+    background: linear-gradient(135deg, $color-navy-dark 0%, $color-navy 100%);
+    padding: $spacing-xl 0;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+        $color-bronze,
+        $color-gold,
+        $color-gold-light,
+        $color-gold,
+        $color-bronze
+      );
+    }
+
+    h1 {
+      color: $color-cream;
+      margin-bottom: $spacing-xs;
+    }
+
+    .page-subtitle {
+      font-family: $font-display;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: $color-gold;
+    }
+  }
+}
+
+// Privacy Policy Specific Styles
+.privacy-content {
+  padding: $spacing-xl 0;
+  background: $color-cream;
+
+  .privacy-layout,
+  .terms-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: $spacing-xl;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 200px 1fr;
+      gap: $spacing-lg;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  }
+
+  .privacy-toc,
+  .terms-toc {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    background: $color-white;
+    padding: $spacing-md;
+    border-radius: $radius-md;
+    box-shadow: $shadow-soft;
+    border: 1px solid rgba($color-gold, 0.2);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      top: 0;
+      max-height: none;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: $color-navy-dark;
+      margin-bottom: $spacing-sm;
+      padding-bottom: $spacing-xs;
+      border-bottom: 2px solid $color-gold;
+    }
+
+    .toc-nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: $spacing-xs;
+
+          a {
+            display: block;
+            padding: $spacing-xs $spacing-sm;
+            color: $color-charcoal;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: $radius-sm;
+            transition: all $transition-fast;
+
+            &:hover {
+              background: $color-parchment;
+              color: $color-navy;
+              padding-left: $spacing-md;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .privacy-main,
+  .terms-main {
+    background: $color-white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-medium;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-md;
+    }
+
+    section {
+      margin-bottom: $spacing-xl;
+      scroll-margin-top: 100px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        color: $color-navy-dark;
+        font-size: 2rem;
+        margin-bottom: $spacing-md;
+        padding-bottom: $spacing-sm;
+        border-bottom: 2px solid $color-gold;
+      }
+
+      h3 {
+        color: $color-navy;
+        font-size: 1.4rem;
+        margin-top: $spacing-lg;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: $color-charcoal;
+        margin-bottom: $spacing-md;
+      }
+
+      ul {
+        margin: $spacing-md 0;
+        padding-left: $spacing-lg;
+
+        li {
+          margin-bottom: $spacing-xs;
+          line-height: 1.7;
+          color: $color-charcoal;
+
+          strong {
+            color: $color-navy;
+          }
+        }
+      }
+
+      .contact-info {
+        background: $color-parchment;
+        padding: $spacing-md;
+        border-radius: $radius-md;
+        margin-top: $spacing-md;
+
+        p {
+          margin-bottom: $spacing-xs;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            color: $color-bronze;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+              color: $color-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TOC Page Specific Styles
+.toc-content {
+  padding: $spacing-xl 0;
+  background: $color-cream;
+
+  .toc-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .toc-section {
+      background: $color-white;
+      padding: $spacing-lg;
+      border-radius: $radius-lg;
+      box-shadow: $shadow-soft;
+      border: 1px solid rgba($color-gold, 0.2);
+
+      h2 {
+        color: $color-navy-dark;
+        font-size: 1.5rem;
+        margin-bottom: $spacing-md;
+        padding-bottom: $spacing-sm;
+        border-bottom: 2px solid $color-gold;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: $spacing-sm;
+          padding-left: $spacing-md;
+          position: relative;
+          line-height: 1.7;
+
+          &::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: $color-gold;
+          }
+
+          a {
+            color: $color-navy;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+              color: $color-bronze;
+              text-decoration: underline;
+            }
+          }
+
+          strong {
+            color: $color-charcoal;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .toc-footer-note {
+    max-width: 800px;
+    margin: $spacing-xl auto 0;
+    text-align: center;
+    padding: $spacing-lg;
+    background: $color-white;
+    border-radius: $radius-md;
+    box-shadow: $shadow-soft;
+
+    p {
+      font-size: 1.1rem;
+      color: $color-charcoal;
+      margin: 0;
+
+      a {
+        color: $color-bronze;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-gold;
+        }
+      }
+    }
+  }
+}
+

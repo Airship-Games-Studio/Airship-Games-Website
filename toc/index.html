@@ -1,0 +1,63 @@
+---
+layout: default
+title: Table of Contents
+description: Site map and table of contents for Airship Games website.
+---
+
+<div class="toc-page">
+  <header class="page-header">
+    <div class="container">
+      <h1>Table of Contents</h1>
+      <p class="page-subtitle">Site map and navigation guide</p>
+    </div>
+  </header>
+
+  <section class="toc-content">
+    <div class="container">
+      <div class="toc-sections">
+        <section class="toc-section">
+          <h2>Main Pages</h2>
+          <ul class="toc-list">
+            <li><a href="{{ '/' | relative_url }}">Home</a> - Welcome to Airship Games</li>
+            <li><a href="{{ '/about/' | relative_url }}">About Us</a> - Learn about our mission and values</li>
+            <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> - Our privacy practices and data protection</li>
+            <li><a href="{{ '/terms/' | relative_url }}">Terms of Service</a> - Terms and conditions for using our services</li>
+          </ul>
+        </section>
+
+        <section class="toc-section">
+          <h2>Our Games</h2>
+          <ul class="toc-list">
+            <li><a href="{{ '/games/quirks/' | relative_url }}">Quirks</a> - Discover a world of delightful peculiarities</li>
+            <li><a href="{{ '/games/megosi/' | relative_url }}">Megosi</a> - Journey through breathtaking landscapes</li>
+          </ul>
+        </section>
+
+        <section class="toc-section">
+          <h2>Quick Links</h2>
+          <ul class="toc-list">
+            <li><a href="mailto:contact@airshipgames.com">Contact Us</a> - Get in touch with our team</li>
+            <li><a href="mailto:privacy@airshipgames.com">Privacy Inquiries</a> - Questions about your data</li>
+          </ul>
+        </section>
+
+        <section class="toc-section">
+          <h2>Site Information</h2>
+          <ul class="toc-list">
+            <li><strong>Site Title:</strong> {{ site.title }}</li>
+            <li><strong>Description:</strong> {{ site.description }}</li>
+            <li><strong>Last Updated:</strong> {{ 'now' | date: '%B %d, %Y' }}</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="toc-footer-note">
+        <p>
+          Can't find what you're looking for? <a href="mailto:contact@airshipgames.com">Contact us</a>
+          and we'll be happy to help!
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
