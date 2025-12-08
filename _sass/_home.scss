@@ -1,19 +1,24 @@
 // Homepage Styles
+
+// Hero Section with Parallax
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    linear-gradient(180deg,
-      rgba($color-navy-dark, 0.7) 0%,
-      rgba($color-navy, 0.5) 50%,
-      rgba($color-cream, 0.9) 100%
-    ),
-    linear-gradient(135deg, $color-sky 0%, $color-parchment 100%);
   overflow: hidden;
+  background-color: $color-parchment;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 
   &::before {
     content: '';
@@ -22,36 +27,53 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23C9A227' opacity='0.3'/%3E%3C/svg%3E");
-    background-size: 50px 50px;
-    opacity: 0.5;
+    background: linear-gradient(
+      180deg,
+      rgba($color-parchment, 0.3) 0%,
+      rgba($color-parchment, 0.5) 40%,
+      rgba($color-cream, 0.85) 100%
+    );
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: sepia(15%) contrast(95%);
   }
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
+  z-index: 2;
+  max-width: 900px;
   padding: $spacing-xl $spacing-md;
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 5rem);
-  color: $color-cream;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: $color-sepia-dark;
+  text-shadow: 2px 2px 0 rgba($color-cream, 0.8);
   margin-bottom: $spacing-sm;
+  letter-spacing: 0.02em;
 
   .highlight {
-    color: $color-gold;
+    color: $color-copper;
     display: block;
+    background: linear-gradient(135deg, $color-copper 0%, $color-gold 50%, $color-copper 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
 .hero-subtitle {
   font-family: $font-display;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: rgba($color-cream, 0.9);
-  font-weight: 300;
+  color: $color-sepia;
+  font-weight: 400;
   font-style: italic;
   margin-bottom: $spacing-lg;
 }
@@ -61,6 +83,53 @@
   gap: $spacing-sm;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+// Small decorative airship in hero
+.hero-decor {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.4;
+  animation: float 8s ease-in-out infinite;
+
+  &.top-left {
+    top: 10%;
+    left: 5%;
+    width: 120px;
+    animation-delay: 0s;
+  }
+
+  &.top-right {
+    top: 15%;
+    right: 8%;
+    width: 80px;
+    animation-delay: 2s;
+  }
+
+  &.bottom-left {
+    bottom: 20%;
+    left: 3%;
+    width: 100px;
+    animation-delay: 4s;
+  }
+
+  img {
+    width: 100%;
+    filter: sepia(40%) contrast(80%);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
 }
 
 // Buttons
@@ -77,27 +146,85 @@
   border-radius: $radius-sm;
   cursor: pointer;
   transition: all $transition-fast;
+  position: relative;
+  overflow: hidden;
 
   &.btn-primary {
-    background: linear-gradient(135deg, $color-gold 0%, $color-bronze 100%);
+    background: linear-gradient(135deg, $color-copper 0%, $color-gold 50%, $color-copper 100%);
     color: $color-white;
     border-color: $color-gold;
+    box-shadow: $shadow-soft;
 
     &:hover {
-      background: linear-gradient(135deg, $color-gold-light 0%, $color-gold 100%);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba($color-gold, 0.4);
+      box-shadow: $shadow-glow;
     }
   }
 
   &.btn-secondary {
     background: transparent;
-    color: $color-cream;
-    border-color: $color-cream;
+    color: $color-sepia-dark;
+    border-color: $color-sepia;
 
     &:hover {
-      background: $color-cream;
-      color: $color-navy-dark;
+      background: $color-sepia-dark;
+      color: $color-cream;
+      border-color: $color-sepia-dark;
+    }
+  }
+}
+
+// Parallax Divider Section
+.parallax-divider {
+  position: relative;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-md) {
+    background-attachment: scroll;
+    height: 250px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba($color-cream, 0.9) 0%,
+      rgba($color-parchment, 0.7) 50%,
+      rgba($color-cream, 0.9) 100%
+    );
+  }
+
+  .parallax-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: $color-sepia-dark;
+
+    .quote {
+      font-family: $font-display;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .quote-ornament {
+      color: $color-gold;
+      font-size: 2rem;
+      margin: $spacing-sm 0;
     }
   }
 }
@@ -106,6 +233,33 @@
 .games-section {
   padding: $spacing-xl 0;
   background: $color-cream;
+  position: relative;
+  overflow: hidden;
+
+  // Decorative corner elements
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba($color-gold, 0.2);
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+  }
 }
 
 .games-grid {
@@ -113,6 +267,8 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: $spacing-lg;
   margin-top: $spacing-lg;
+  position: relative;
+  z-index: 1;
 }
 
 .game-card {
@@ -122,7 +278,7 @@
   box-shadow: $shadow-medium;
   transition: all $transition-normal;
   position: relative;
-  border: 1px solid rgba($color-gold, 0.2);
+  border: 1px solid rgba($color-sepia-light, 0.3);
 
   &::before {
     content: '';
@@ -131,15 +287,16 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, $color-bronze, $color-gold, $color-bronze);
+    background: linear-gradient(90deg, $color-sepia, $color-copper, $color-gold, $color-copper, $color-sepia);
   }
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: $shadow-strong;
+    box-shadow: $shadow-strong, $shadow-glow;
 
     .game-card-image img {
       transform: scale(1.05);
+      filter: sepia(0%);
     }
   }
 }
@@ -148,13 +305,14 @@
   position: relative;
   height: 220px;
   overflow: hidden;
-  background: linear-gradient(135deg, $color-navy 0%, $color-sky 100%);
+  background: linear-gradient(135deg, $color-parchment 0%, $color-cream 100%);
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform $transition-slow;
+    transition: all $transition-slow;
+    filter: sepia(15%);
   }
 
   .game-card-overlay {
@@ -163,15 +321,15 @@
     left: 0;
     right: 0;
     padding: $spacing-md;
-    background: linear-gradient(transparent, rgba($color-navy-dark, 0.8));
+    background: linear-gradient(transparent, rgba($color-sepia-dark, 0.85));
   }
 }
 
 .game-card-badge {
   display: inline-block;
   padding: $spacing-xs $spacing-sm;
-  background: $color-gold;
-  color: $color-navy-dark;
+  background: linear-gradient(135deg, $color-gold 0%, $color-copper 100%);
+  color: $color-white;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -181,16 +339,17 @@
 
 .game-card-content {
   padding: $spacing-md;
+  background: linear-gradient(180deg, $color-white 0%, $color-parchment 100%);
 }
 
 .game-card-title {
   font-size: 1.5rem;
   margin-bottom: $spacing-xs;
-  color: $color-navy-dark;
+  color: $color-sepia-dark;
 }
 
 .game-card-description {
-  color: $color-charcoal;
+  color: $color-warm-gray;
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: $spacing-md;
@@ -203,11 +362,12 @@
 
   .platform-tag {
     padding: $spacing-xs $spacing-sm;
-    background: $color-parchment;
-    color: $color-sepia;
+    background: $color-parchment-dark;
+    color: $color-sepia-dark;
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: $radius-sm;
+    border: 1px solid $color-sepia-light;
   }
 }
 
@@ -216,15 +376,15 @@
   text-align: center;
   padding: $spacing-sm;
   background: $color-parchment;
-  color: $color-bronze;
+  color: $color-copper;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: all $transition-fast;
-  border-top: 1px solid rgba($color-gold, 0.2);
+  border-top: 1px solid rgba($color-sepia-light, 0.3);
 
   &:hover {
-    background: $color-gold;
+    background: linear-gradient(135deg, $color-copper 0%, $color-gold 100%);
     color: $color-white;
   }
 }
@@ -232,21 +392,18 @@
 // About Section (Homepage)
 .about-section {
   padding: $spacing-xl 0;
-  background:
-    linear-gradient(135deg, $color-parchment 0%, $color-cream 100%);
+  background: linear-gradient(180deg, $color-parchment 0%, $color-cream 100%);
   position: relative;
 
   &::before {
-    content: '* * *';
+    content: '';
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background: $color-cream;
-    padding: 0 $spacing-md;
-    color: $color-gold;
-    font-size: 1.5rem;
-    letter-spacing: 1rem;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $color-gold, transparent);
   }
 }
 
@@ -254,10 +411,158 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 
   p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: $color-charcoal;
+    color: $color-warm-gray;
+  }
+}
+
+// Decorative image section
+.decor-strip {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  padding: $spacing-lg 0;
+  background: $color-parchment;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $color-gold, transparent);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  .decor-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $color-gold;
+    box-shadow: $shadow-soft;
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: $shadow-glow;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: sepia(20%);
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    gap: $spacing-sm;
+
+    .decor-item {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+// Feature showcase with image
+.feature-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 400px;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: sepia(10%);
+      transition: all $transition-slow;
+    }
+
+    &:hover img {
+      transform: scale(1.02);
+      filter: sepia(0%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba($color-cream, 0.3) 100%
+      );
+    }
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $spacing-xl;
+    background: $color-cream;
+
+    h3 {
+      color: $color-sepia-dark;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $color-warm-gray;
+      line-height: 1.8;
+    }
+  }
+
+  &.reverse {
+    .feature-image {
+      order: 2;
+
+      &::after {
+        background: linear-gradient(
+          270deg,
+          transparent 0%,
+          rgba($color-cream, 0.3) 100%
+        );
+      }
+    }
+
+    .feature-content {
+      order: 1;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      .feature-image,
+      .feature-content {
+        order: unset;
+      }
+    }
   }
 }

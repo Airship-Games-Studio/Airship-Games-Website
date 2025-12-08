@@ -34,6 +34,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Parallax effect for hero background
+  const parallaxBg = document.querySelector('.parallax-bg');
+  const heroDecors = document.querySelectorAll('.hero-decor');
+
+  if (parallaxBg || heroDecors.length > 0) {
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * 0.3;
+
+      if (parallaxBg) {
+        parallaxBg.style.transform = 'translateY(' + rate + 'px)';
+      }
+
+      // Floating decorative elements move at different rates
+      heroDecors.forEach(function(decor, index) {
+        const speed = 0.1 + (index * 0.05);
+        decor.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
+      });
+    });
+  }
+
   // Add scroll effect to header
   const header = document.querySelector('.site-header');
   let lastScroll = 0;
@@ -42,9 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+      header.style.boxShadow = '0 4px 20px rgba(112, 66, 20, 0.25)';
     } else {
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+      header.style.boxShadow = '0 4px 20px rgba(112, 66, 20, 0.15)';
     }
 
     lastScroll = currentScroll;
@@ -66,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
 
-  // Observe game cards and feature cards
-  document.querySelectorAll('.game-card, .feature-card, .screenshot-item').forEach(function(el) {
+  // Observe game cards, feature cards, and decorative items
+  document.querySelectorAll('.game-card, .feature-card, .screenshot-item, .decor-item, .feature-showcase').forEach(function(el) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -83,4 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   `;
   document.head.appendChild(style);
+
+  // Decorative strip items staggered animation
+  const decorItems = document.querySelectorAll('.decor-item');
+  decorItems.forEach(function(item, index) {
+    item.style.transitionDelay = (index * 0.1) + 's';
+  });
 });
