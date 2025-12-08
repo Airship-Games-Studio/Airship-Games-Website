@@ -1,6 +1,6 @@
-// Header Styles
+// Header Styles - Vintage Aesthetic
 .site-header {
-  background: linear-gradient(180deg, $color-navy-dark 0%, $color-navy 100%);
+  background: linear-gradient(180deg, $color-sepia-dark 0%, $color-sepia 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -10,11 +10,11 @@
 .header-ornament {
   height: 4px;
   background: linear-gradient(90deg,
-    $color-bronze,
+    $color-sepia,
+    $color-copper,
     $color-gold,
-    $color-gold-light,
-    $color-gold,
-    $color-bronze
+    $color-copper,
+    $color-sepia
   );
 
   &.bottom {
@@ -150,7 +150,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: $color-navy-dark;
+    background: $color-sepia-dark;
     padding: $spacing-md;
     gap: 0;
     max-height: 0;

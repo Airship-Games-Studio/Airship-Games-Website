@@ -1,6 +1,6 @@
-// Footer Styles
+// Footer Styles - Vintage Aesthetic
 .site-footer {
-  background: linear-gradient(180deg, $color-navy 0%, $color-navy-dark 100%);
+  background: linear-gradient(180deg, $color-sepia 0%, $color-sepia-dark 100%);
   color: $color-cream;
   margin-top: auto;
   position: relative;
@@ -9,11 +9,11 @@
 .footer-ornament {
   height: 4px;
   background: linear-gradient(90deg,
-    $color-bronze,
+    $color-sepia,
+    $color-copper,
     $color-gold,
-    $color-gold-light,
-    $color-gold,
-    $color-bronze
+    $color-copper,
+    $color-sepia
   );
 }
 
@@ -98,5 +98,24 @@
     font-style: italic;
     color: rgba($color-gold, 0.6);
     font-size: 0.85rem;
+  }
+}
+
+// Decorative airship in footer
+.footer-decor {
+  position: absolute;
+  right: 5%;
+  top: -30px;
+  width: 80px;
+  opacity: 0.3;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    filter: sepia(30%) brightness(150%);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
   }
 }

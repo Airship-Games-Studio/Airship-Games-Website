@@ -19,9 +19,12 @@ body {
   color: $color-charcoal;
   background-color: $color-cream;
   background-image:
-    radial-gradient(ellipse at top, rgba($color-gold, 0.03) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L30 60M0 30L60 30' stroke='%23C9A227' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+    // Subtle paper texture
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
+    // Vintage grid pattern
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L30 60M0 30L60 30' stroke='%238B7355' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 // Container
@@ -37,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-display;
   font-weight: 600;
   line-height: 1.2;
-  color: $color-navy-dark;
+  color: $color-sepia-dark;
   margin-bottom: $spacing-sm;
 }
 
@@ -58,7 +61,7 @@ p {
 }
 
 a {
-  color: $color-bronze;
+  color: $color-copper;
   text-decoration: none;
   transition: color $transition-fast;
 
@@ -82,13 +85,14 @@ img {
   text-align: center;
   margin-bottom: $spacing-lg;
   position: relative;
+  color: $color-sepia-dark;
 
   &::after {
     content: '';
     display: block;
-    width: 80px;
+    width: 120px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, $color-gold, transparent);
+    background: linear-gradient(90deg, transparent, $color-gold, $color-copper, $color-gold, transparent);
     margin: $spacing-sm auto 0;
   }
 }
@@ -107,4 +111,84 @@ img {
   height: 1px;
   background: linear-gradient(90deg, transparent, $color-gold, transparent);
   margin: $spacing-md 0;
+}
+
+// Vintage border frame
+.vintage-frame {
+  position: relative;
+  border: 2px solid $color-sepia-light;
+  padding: $spacing-md;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-gold;
+  }
+
+  &::before {
+    top: -4px;
+    left: -4px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: -4px;
+    right: -4px;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+// Parallax section base
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    background-attachment: scroll;
+  }
+}
+
+// Floating decorative images
+.floating-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+
+  &.left {
+    left: -5%;
+  }
+
+  &.right {
+    right: -5%;
+  }
+
+  img {
+    max-width: 200px;
+    filter: sepia(30%) contrast(90%);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+// Sepia image filter for consistent look
+.sepia-image {
+  filter: sepia(20%) contrast(95%) brightness(105%);
+  transition: filter $transition-normal;
+
+  &:hover {
+    filter: sepia(0%) contrast(100%) brightness(100%);
+  }
 }
