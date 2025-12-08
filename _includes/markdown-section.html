@@ -1,0 +1,4 @@
+{% capture md_content %}{{ include.content }}{% endcapture %}
+<section id="{{ include.id }}">
+{{ md_content | markdownify }}
+</section>
