@@ -1,0 +1,16 @@
+---
+# Main stylesheet
+---
+
+@import "variables";
+@import "base";
+@import "header";
+@import "footer";
+@import "home";
+@import "game-page";
+@import "about";
+
+// Main content wrapper
+.main-content {
+  min-height: calc(100vh - 200px);
+}

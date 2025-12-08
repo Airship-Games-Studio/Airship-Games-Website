@@ -1,0 +1,211 @@
+// Individual Game Page Styles
+.game-page {
+  .game-header {
+    background: linear-gradient(135deg, $color-navy-dark 0%, $color-navy 100%);
+    padding: $spacing-xl 0;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+        $color-bronze,
+        $color-gold,
+        $color-gold-light,
+        $color-gold,
+        $color-bronze
+      );
+    }
+  }
+
+  .game-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: $color-cream;
+    margin-bottom: $spacing-xs;
+  }
+
+  .game-tagline {
+    font-family: $font-display;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: $color-gold;
+  }
+}
+
+.game-hero {
+  padding: $spacing-xl 0;
+  background: $color-parchment;
+
+  .hero-image-wrapper {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-strong;
+    border: 4px solid $color-white;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.game-platforms {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+}
+
+.platform-badge {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  background: $color-navy-dark;
+  color: $color-cream;
+  border-radius: $radius-md;
+  text-decoration: none;
+  transition: all $transition-fast;
+  border: 2px solid $color-navy;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-medium;
+    border-color: $color-gold;
+  }
+
+  &.android {
+    background: linear-gradient(135deg, #3DDC84 0%, #2CA65F 100%);
+    border-color: #3DDC84;
+
+    &:hover {
+      background: linear-gradient(135deg, #4CE795 0%, #3DDC84 100%);
+    }
+  }
+
+  &.web {
+    background: linear-gradient(135deg, $color-sky 0%, $color-navy 100%);
+  }
+
+  .platform-icon {
+    font-size: 1.5rem;
+  }
+
+  .platform-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    small {
+      font-size: 0.7rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    strong {
+      font-size: 1rem;
+    }
+  }
+}
+
+.game-content {
+  padding: $spacing-xl 0;
+  background: $color-cream;
+
+  h2 {
+    color: $color-navy-dark;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-sm;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+  }
+
+  ul, ol {
+    margin: $spacing-sm 0 $spacing-md $spacing-md;
+    line-height: 1.8;
+
+    li {
+      margin-bottom: $spacing-xs;
+    }
+  }
+}
+
+.game-screenshots {
+  padding: $spacing-xl 0;
+  background: $color-parchment;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-md;
+}
+
+.screenshot-item {
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-medium;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.game-features {
+  padding: $spacing-xl 0;
+  background: $color-cream;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-md;
+}
+
+.feature-card {
+  background: $color-white;
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  box-shadow: $shadow-soft;
+  border-left: 4px solid $color-gold;
+  transition: all $transition-fast;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: $shadow-medium;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: $color-navy-dark;
+    margin-bottom: $spacing-xs;
+  }
+
+  p {
+    color: $color-charcoal;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}

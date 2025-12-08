@@ -1,0 +1,102 @@
+// Footer Styles
+.site-footer {
+  background: linear-gradient(180deg, $color-navy 0%, $color-navy-dark 100%);
+  color: $color-cream;
+  margin-top: auto;
+  position: relative;
+}
+
+.footer-ornament {
+  height: 4px;
+  background: linear-gradient(90deg,
+    $color-bronze,
+    $color-gold,
+    $color-gold-light,
+    $color-gold,
+    $color-bronze
+  );
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: $spacing-lg;
+  padding: $spacing-xl 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.footer-brand {
+  .logo-icon {
+    font-size: 2rem;
+    color: $color-gold;
+  }
+
+  .logo-text {
+    font-family: $font-display;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: $spacing-xs;
+  }
+
+  .footer-tagline {
+    color: rgba($color-cream, 0.7);
+    font-style: italic;
+    margin-top: $spacing-sm;
+  }
+}
+
+.footer-games,
+.footer-links {
+  h4 {
+    font-family: $font-display;
+    font-size: 1.1rem;
+    color: $color-gold;
+    margin-bottom: $spacing-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+
+  a {
+    color: rgba($color-cream, 0.8);
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-bottom: $spacing-md;
+
+  .decorative-line {
+    background: linear-gradient(90deg, transparent, rgba($color-gold, 0.5), transparent);
+    margin-bottom: $spacing-md;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    color: rgba($color-cream, 0.6);
+    margin-bottom: $spacing-xs;
+  }
+
+  .footer-motto {
+    font-family: $font-display;
+    font-style: italic;
+    color: rgba($color-gold, 0.6);
+    font-size: 0.85rem;
+  }
+}

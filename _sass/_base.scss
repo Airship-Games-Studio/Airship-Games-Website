@@ -1,0 +1,110 @@
+// Reset and Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-charcoal;
+  background-color: $color-cream;
+  background-image:
+    radial-gradient(ellipse at top, rgba($color-gold, 0.03) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L30 60M0 30L60 30' stroke='%23C9A227' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+  min-height: 100vh;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-navy-dark;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  margin-bottom: $spacing-sm;
+}
+
+a {
+  color: $color-bronze;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-gold;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: $spacing-lg;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $color-gold, transparent);
+    margin: $spacing-sm auto 0;
+  }
+}
+
+// Decorative Elements
+.ornament {
+  display: block;
+  text-align: center;
+  color: $color-gold;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  opacity: 0.6;
+}
+
+.decorative-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $color-gold, transparent);
+  margin: $spacing-md 0;
+}

@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="footer-ornament"></div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">✧</span>
+        <span class="logo-text">{{ site.title }}</span>
+        <p class="footer-tagline">Adventures await in the skies</p>
+      </div>
+
+      <div class="footer-games">
+        <h4>Our Games</h4>
+        <ul>
+          <li><a href="{{ '/games/quirks/' | relative_url }}">Quirks</a></li>
+          <li><a href="{{ '/games/megosi/' | relative_url }}">Megosi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+          <li><a href="mailto:contact@airshipgames.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="decorative-line"></div>
+      <p class="copyright">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p class="footer-motto">Crafting adventures since the golden age</p>
+    </div>
+  </div>
+</footer>

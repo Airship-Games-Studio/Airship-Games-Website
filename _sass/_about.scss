@@ -1,0 +1,134 @@
+// About Page Styles
+.about-page {
+  .page-header {
+    background: linear-gradient(135deg, $color-navy-dark 0%, $color-navy 100%);
+    padding: $spacing-xl 0;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+        $color-bronze,
+        $color-gold,
+        $color-gold-light,
+        $color-gold,
+        $color-bronze
+      );
+    }
+
+    h1 {
+      color: $color-cream;
+      margin-bottom: $spacing-xs;
+    }
+
+    .page-subtitle {
+      font-family: $font-display;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: $color-gold;
+    }
+  }
+
+  .about-intro {
+    padding: $spacing-xl 0;
+    background: $color-parchment;
+
+    .intro-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $color-charcoal;
+      }
+    }
+  }
+
+  .about-mission {
+    padding: $spacing-xl 0;
+    background: $color-cream;
+
+    .mission-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-lg;
+      align-items: center;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mission-text {
+      h2 {
+        color: $color-navy-dark;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+    }
+
+    .mission-values {
+      display: grid;
+      gap: $spacing-sm;
+
+      .value-item {
+        background: $color-white;
+        padding: $spacing-md;
+        border-radius: $radius-md;
+        border-left: 4px solid $color-gold;
+        box-shadow: $shadow-soft;
+
+        h3 {
+          color: $color-navy;
+          font-size: 1.1rem;
+          margin-bottom: $spacing-xs;
+        }
+
+        p {
+          margin: 0;
+          color: $color-charcoal;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+
+  .about-contact {
+    padding: $spacing-xl 0;
+    background: $color-parchment;
+    text-align: center;
+
+    h2 {
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto $spacing-md;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 1.2rem;
+      color: $color-bronze;
+      font-weight: 600;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}

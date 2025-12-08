@@ -1,0 +1,170 @@
+// Header Styles
+.site-header {
+  background: linear-gradient(180deg, $color-navy-dark 0%, $color-navy 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: $shadow-medium;
+}
+
+.header-ornament {
+  height: 4px;
+  background: linear-gradient(90deg,
+    $color-bronze,
+    $color-gold,
+    $color-gold-light,
+    $color-gold,
+    $color-bronze
+  );
+
+  &.bottom {
+    height: 2px;
+    opacity: 0.6;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm $spacing-md;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  color: $color-cream;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-gold;
+  }
+
+  .logo-icon {
+    font-size: 1.8rem;
+    color: $color-gold;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-xs;
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: $color-cream;
+    position: relative;
+    transition: background $transition-fast;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-cream;
+      transition: transform $transition-fast;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+
+  &.active .hamburger {
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: $spacing-md;
+
+  a {
+    color: $color-cream;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: $spacing-xs $spacing-sm;
+    position: relative;
+    transition: color $transition-fast;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $color-gold;
+      transition: all $transition-fast;
+      transform: translateX(-50%);
+    }
+
+    &:hover,
+    &.active {
+      color: $color-gold;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Mobile Navigation
+@media (max-width: $breakpoint-md) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: $color-navy-dark;
+    padding: $spacing-md;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-normal;
+
+    &.active {
+      max-height: 300px;
+    }
+
+    a {
+      display: block;
+      padding: $spacing-sm;
+      text-align: center;
+    }
+  }
+}

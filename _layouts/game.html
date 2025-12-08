@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<article class="game-page">
+  <header class="game-header">
+    <div class="container">
+      <h1 class="game-title">{{ page.title }}</h1>
+      <p class="game-tagline">{{ page.tagline }}</p>
+    </div>
+  </header>
+
+  <section class="game-hero">
+    <div class="container">
+      {% if page.hero_image %}
+      <div class="hero-image-wrapper">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}" class="hero-image">
+      </div>
+      {% endif %}
+
+      <div class="game-platforms">
+        {% if page.android_link %}
+        <a href="{{ page.android_link }}" class="platform-badge android" target="_blank" rel="noopener">
+          <span class="platform-icon">▶</span>
+          <span class="platform-text">
+            <small>Get it on</small>
+            <strong>Google Play</strong>
+          </span>
+        </a>
+        {% endif %}
+
+        {% if page.website_link %}
+        <a href="{{ page.website_link }}" class="platform-badge web" target="_blank" rel="noopener">
+          <span class="platform-icon">🌐</span>
+          <span class="platform-text">
+            <small>Play on</small>
+            <strong>Web</strong>
+          </span>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="game-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+
+  {% if page.screenshots %}
+  <section class="game-screenshots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots-grid">
+        {% for screenshot in page.screenshots %}
+        <div class="screenshot-item">
+          <img src="{{ screenshot | relative_url }}" alt="{{ page.title }} screenshot">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.features %}
+  <section class="game-features">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <div class="features-grid">
+        {% for feature in page.features %}
+        <div class="feature-card">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</article>
