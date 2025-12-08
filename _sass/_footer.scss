@@ -19,7 +19,7 @@
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: $spacing-lg;
   padding: $spacing-xl 0 $spacing-lg;
 
@@ -50,7 +50,8 @@
 }
 
 .footer-games,
-.footer-links {
+.footer-links,
+.footer-legal {
   h4 {
     font-family: $font-display;
     font-size: 1.1rem;
