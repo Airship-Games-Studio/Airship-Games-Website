@@ -8,6 +8,11 @@ url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
 permalink: pretty
 
 # Sass settings
