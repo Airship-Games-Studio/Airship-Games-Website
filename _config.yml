@@ -41,6 +41,7 @@ defaults:
 
 # Exclude from processing
 exclude:
+  - _legal_drafts
   - Gemfile
   - Gemfile.lock
   - README.md
