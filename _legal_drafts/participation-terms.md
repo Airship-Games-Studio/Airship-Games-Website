@@ -11,13 +11,13 @@ published: false
 
 ## 1. Who operates Aerodrome and what these terms cover
 
-Aerodrome is operated by [LEGAL PERSON OR ENTITY], trading as Airship Games, at [BUSINESS ADDRESS AND COUNTRY] ("we", "us"). Contact: [LEGAL CONTACT EMAIL]. These terms cover Aerodrome accounts, game discussion, feedback, feature proposals, voting, submitted captures and community recognition. They do not replace separate terms for buying or playing a game.
+Aerodrome is operated by Ministry of Product LLC, a Washington limited liability company doing business as Airship Games, United States ("we", "us"). Contact: legal@airshipgames.com. [REVIEW NOTE: the owner’s home address is private and must not be published; obtain a suitable alternative only if a public mailing address is legally required.] These terms cover Aerodrome accounts, game discussion, feedback, feature proposals, voting, submitted captures and community recognition. They do not replace separate terms for buying or playing a game.
 
 For Aerodrome contributions, these terms replace conflicting general Airship Games provisions about user-content licences, automated access and contribution recognition. Other applicable site terms continue only to the extent consistent with these terms and mandatory law. The existing site terms must be reconciled before this provision becomes effective.
 
 ## 2. Eligibility and agreement
 
-[AGE POLICY TO CONFIRM WITH COUNSEL: intended audience, minimum participation age, country-specific requirements, parental involvement and whether minors may grant the permissions below. Do not publish this unresolved section.]
+You must be at least 13 to create an account or participate, and meet any higher applicable minimum age in your location. If you are below the local age of majority, your parent or legal guardian must review and agree to these terms as required. [IMPLEMENTATION/LEGAL REVIEW: follow Reddit's age-policy structure, validate applicable regional rules and each game's actual audience, and implement eligibility/guardian handling before making this effective. Do not assume Reddit-specific regional requirements automatically apply to Aerodrome.]
 
 Before first posting, we ask you to agree to the then-current Participation Terms and Community Rules. The Privacy Notice explains data practices; accepting terms is not blanket consent to optional data uses. Keep your sign-in secure and do not impersonate others. You may use a public nickname; do not include another person's private information.
 
@@ -51,13 +51,15 @@ Automated access is permitted only through an authorized integration and its sco
 
 ## 7. Rules, moderation and appeals
 
-Follow the Community Rules. Criticism, frustration and disagreement are welcome. We may remove violating content, limit posting, or suspend access for abuse, manipulation, security issues or legal reasons. Where practical we explain the rule and action and offer review through [APPEALS CONTACT OR FORM]. Urgent protective action may happen first. Low vote totals, criticism of a game and disagreement with an operator are not themselves misconduct.
+Follow the Community Rules. Criticism, frustration and disagreement are welcome. We may remove violating content, limit posting, or suspend access for abuse, manipulation, security issues or legal reasons. Where practical we explain the rule and action and offer review through contact@airshipgames.com. Urgent protective action may happen first. Low vote totals, criticism of a game and disagreement with an operator are not themselves misconduct.
+
+Service acknowledgements, feedback replies, summaries, status notices and request responses are automated and identified as such. An automated receipt is not a completed deletion or an individual review by Matt. Automation of responses does not by itself authorize account penalties or decide appeals; unresolved cases need a defined review/escalation route.
 
 ## 8. Recognition, leaving and changes
 
 Community credits recognize documented participation under the Credits Policy. You can choose an approved display name, decline public credit or request a correction. Credit does not promise exclusivity, compensation or game ownership.
 
-You may stop participating and request account or content deletion through [PRIVACY CONTACT OR FORM]. We may change or discontinue service features. We will publish dated versions and give reasonable advance notice of material terms changes; where law requires renewed agreement we will obtain it before the change applies. Changed licence terms are not silently applied retroactively to old submissions.
+You may stop participating and request account or content deletion through privacy@airshipgames.com. Choose account deletion (remove identity and votes, retain appropriately de-identified discussion) or account and contribution deletion (also remove your posts and images, with minimal placeholders where needed for others' replies). Our approved target is account-information removal within 30 days of a verified request, subject to narrow documented legal/security exceptions and applicable shorter deadlines. The Privacy Notice describes the approved retention schedule. [VERIFY implementation before effectiveness.] We may change or discontinue service features. We will publish dated versions and give reasonable advance notice of material terms changes; where law requires renewed agreement we will obtain it before the change applies. Changed licence terms are not silently applied retroactively to old submissions.
 
 ## 9. Legal terms requiring review
 

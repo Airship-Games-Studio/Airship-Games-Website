@@ -1,6 +1,6 @@
 # Aerodrome legal and policy review pack
 
-Prepared October 15, 2026 for MIN-2441. These are first drafts for operator and qualified legal review, not an assertion of legal compliance or effective public terms. No jurisdiction or legal entity has been assumed. All drafts are excluded from the site's build and have `published: false`.
+Prepared October 15, 2026 for MIN-2441. These are first drafts for operator and qualified legal review, not an assertion of legal compliance or effective public terms. Operator confirmed: Ministry of Product LLC, a Washington LLC doing business as Airship Games. The owner's home address is private and must not be copied into drafts or public pages. All drafts are excluded from the site's build and have `published: false`.
 
 ## Intended public references
 
@@ -25,12 +25,12 @@ The new product direction is community-led and reaction-first. Planned screensho
 
 ## Operator and counsel decisions before effectiveness
 
-- Legal operator name, address, country/state, verified public contact and intended launch markets.
+- Operator identity/state are confirmed. Keep the home address private; determine any legally required non-home mailing address. Use site-listed privacy@airshipgames.com, legal@airshipgames.com and contact@airshipgames.com; verify delivery/automated routing. Intended launch markets still need applicability review.
 - Age policy for community participation and each game's audience, including whether children are likely to participate; minors' contract/licence issues and parental processes. A 13+ label alone is insufficient.
 - Provider inventory, hosting/AI locations, log/export retention, AI training/retention settings and contracts; applicable regional legal bases, rights and transfer requirements.
-- Adoption and implementation of retention periods, deletion/anonymization semantics, backup and derived-content removal, AI/MCP export lifecycle and any exceptions.
+- Retention schedule and two deletion modes are now approved in the privacy draft and Aerodrome builder handoff. Implement and verify purges, removal propagation, backups, AI/MCP export lifecycle and narrow documented exceptions before effectiveness.
 - Scope and duration of contribution licence, existing implementations after removal, third-party material and separate code/art contribution process. Credits are recognition; commercial participation requires a separate agreement.
-- Moderator, realistic report turnaround, appeals route and delegated AI powers. Criticism is not abuse.
+- All service responses are automated and labelled; no routine 48-hour personal reply is promised. Define resolution/escalation and delegated moderation powers separately. Criticism is not abuse.
 - Vote-led prioritization and operator exception process; no promise to ship a feature merely because it ranks first.
 - Confirm any analytics opt-out/consent and sale/sharing disclosures actually required and applicable; avoid broad unsupported claims.
 - Site-wide legal provisions, especially existing arbitration/liability language, reviewed rather than copied into a new agreement.
@@ -47,3 +47,11 @@ Capture preview: “This image and comment will be public in [game]. Check for p
 - FTC, [COPPA FAQs](https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions) and [current rule materials](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa): child-directed services and actual knowledge require specific review. The FAQ flags amendments dated April 22, 2025; check the revised rule for operative requirements instead of relying only on historical FAQ wording.
 - California AG, [privacy guidance](https://oag.ca.gov/sites/all/files/agweb/pdfs/cybersecurity/making_your_privacy_practices_public.pdf) and [CCPA overview](https://oag.ca.gov/privacy/ccpa): check applicability and truthful practice-specific disclosures. No assumption is made that CCPA applies to this operator.
 - Reddit [Rules](https://redditinc.com/policies/reddit-rules) and [Moderator Code of Conduct](https://redditinc.com/policies/moderator-code-of-conduct) informed structure only; these drafts use original wording and are not Reddit policies or an affiliation with Reddit.
+
+## Confirmed October 15 handoff update
+
+The operator approved the retention recommendation: community-life posts/screenshots, account deletion within 30 days of verification, removal of votes with account deletion, 90-day detailed analytics, 30-day routine logs, 12 months after resolution for moderation history, 24-hour abandoned server uploads/drafts, processing-completion deletion with a 30-day maximum for raw AI/MCP exports, provider-verified backup expiry within 30 days, and credits while available with attribution removal. Two deletion choices distinguish account-only de-identification from account-and-contribution removal; identifiable AI derivatives must be corrected or removed. See the privacy draft for the authoritative table.
+
+Age direction: use Reddit's 13+ / higher applicable local minimum / guardian agreement structure. Reddit's current help examples include Australia 16 and Brazil guardian approval below 16; verify Aerodrome's actual legal applicability rather than importing Reddit-specific duties blindly. See [Reddit age reference](https://support.reddithelp.com/hc/en-us/articles/360043066492-How-old-do-I-need-to-be-to-use-Reddit) and [FTC retention guidance](https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business).
+
+Policy approval is not technical verification or legal sign-off. These pages remain unpublished drafts. Do not publish tax records, identifiers or the owner's home address. Ministry of Product LLC's tax election is not part of these public documents.

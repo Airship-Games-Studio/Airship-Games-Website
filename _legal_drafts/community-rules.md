@@ -15,7 +15,7 @@ Tell us what happened, what felt good or bad, or what you wish worked differentl
 2. **Protect people's privacy.** No doxxing, passwords, private messages or personal information about others. Check captures before posting; crop or cover private information.
 3. **Keep it relevant and honest.** Use the right game's space. No spam, scams, impersonation, fabricated evidence or undisclosed promotion. Label edited evidence when the edit changes what happened; arrows and highlights are welcome.
 4. **Let votes represent people.** No extra accounts to multiply support, bought votes, voting bots, coercion or ban evasion. Inviting people to discuss an idea is welcome; manufacturing support is not.
-5. **Respect rights and safety.** Share material you are entitled to share. Report security vulnerabilities privately through [SECURITY CONTACT], without publishing credentials or instructions that expose other players.
+5. **Respect rights and safety.** Share material you are entitled to share. Report security vulnerabilities privately through contact@airshipgames.com, without publishing credentials or instructions that expose other players.
 
 ## How discussion becomes development
 
@@ -25,6 +25,6 @@ Votes guide the default priorities. Operators explain significant departures whe
 
 ## Reporting and review
 
-Use Report on a post or proposal for a rule concern, or contact [MODERATION CONTACT] for an image/privacy issue or appeal. [CONFIRM moderator and realistic response target; no 24/7 or emergency-service promise.] We may hide content while reviewing a report, explain a decision where practical and use proportionate warnings or restrictions. You may request review of a moderation decision. AI flags are evidence to check, not proof of misconduct. Severe threats, exposure of private information or active abuse can require immediate action.
+Use Report on a post or proposal for a rule concern, or contact contact@airshipgames.com for an image/privacy issue or appeal. Acknowledgements, service replies and status notices are automated and labelled. No routine personal-response or 48-hour human-review commitment is made. Automated responses do not by themselves authorize account restrictions or appeal decisions; the builder must define resolution and escalation permissions. This is not an emergency service. We may hide content while reviewing a report, explain a decision where practical and use proportionate warnings or restrictions. You may request review of a moderation decision. AI flags are evidence to check, not proof of misconduct. Severe threats, exposure of private information or active abuse can require immediate action.
 
 Panel house-rules line: **Criticize the game, respect people, protect privacy, and don't manipulate votes.**

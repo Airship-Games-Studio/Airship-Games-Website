@@ -17,7 +17,7 @@ Recognition may include ideas and inspiration, design refinement, playtesting, b
 
 We link original feedback to proposals and shipped work. AI may suggest credits from that evidence; an accountable operator checks the attribution before publication. We can acknowledge independent similar ideas and several contributors to one change without declaring an exclusive inventor.
 
-Public credit is opt-in under this proposed policy. Choose an appropriate display name or pseudonym; we do not require a legal name or publish your sign-in email. You can decline credit, change the displayed name, ask for a correction or request removal through [CREDITS CONTACT OR FORM]. We explain disputed credit decisions and allow review. Staff and paid contributors are identified accurately rather than presented as unpaid community members.
+Public credit is opt-in under this proposed policy. Choose an appropriate display name or pseudonym; we do not require a legal name or publish your sign-in email. You can decline credit, change the displayed name, ask for a correction or request removal through contact@airshipgames.com. We explain disputed credit decisions and allow review. Staff and paid contributors are identified accurately rather than presented as unpaid community members.
 
 ## Meaning of recognition
 
