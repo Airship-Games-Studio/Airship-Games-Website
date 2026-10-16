@@ -12,8 +12,13 @@
 
     <ul class="nav-links">
       <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
-      <li><a href="{{ '/games/quirks/' | relative_url }}" {% if page.url contains 'quirks' %}class="active"{% endif %}>Quirks</a></li>
-      <li><a href="{{ '/games/megosi/' | relative_url }}" {% if page.url contains 'megosi' %}class="active"{% endif %}>Megosi</a></li>
+      {%- assign nav_games = site.data.games | sort: 'order' -%}
+      {%- for game in nav_games -%}
+      {%- if game.page and game.status != 'coming-soon' %}
+      {%- capture game_url %}/games/{{ game.slug }}/{% endcapture %}
+      <li><a href="{{ game_url | relative_url }}" {% if page.url == game_url %}class="active"{% endif %}>{{ game.title }}</a></li>
+      {%- endif -%}
+      {%- endfor %}
       <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>About</a></li>
     </ul>
   </nav>

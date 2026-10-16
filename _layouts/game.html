@@ -1,12 +1,20 @@
 ---
 layout: default
 ---
+{%- assign game = site.data.games | where: 'slug', page.game | first -%}
 
 <article class="game-page">
   <header class="game-header">
     <div class="container">
       <h1 class="game-title">{{ page.title }}</h1>
-      <p class="game-tagline">{{ page.tagline }}</p>
+      <p class="game-tagline">{{ game.tagline | default: page.tagline }}</p>
+      {%- if game %}
+      <p class="game-status-line">
+        <span class="game-card-badge status-{{ game.status }}">{% include game-status.html status=game.status %}</span>
+        {%- for platform in game.platforms %} <span class="platform-tag">{{ platform }}</span>{% endfor %}
+        {%- if page.version %} <span class="game-version">Version {{ page.version }}</span>{% endif %}
+      </p>
+      {%- endif %}
     </div>
   </header>
 
@@ -14,30 +22,29 @@ layout: default
     <div class="container">
       {% if page.hero_image %}
       <div class="hero-image-wrapper">
-        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}" class="hero-image">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title }}" class="hero-image">
       </div>
       {% endif %}
 
       <div class="game-platforms">
-        {% if page.android_link %}
-        <a href="{{ page.android_link }}" class="platform-badge android" target="_blank" rel="noopener">
-          <span class="platform-icon">▶</span>
+        {%- if game.play_url and game.play_url != "" %}
+        <a href="{{ game.play_url }}" class="platform-badge web" target="_blank" rel="noopener">
+          <span class="platform-icon" aria-hidden="true">▶</span>
           <span class="platform-text">
-            <small>Get it on</small>
-            <strong>Google Play</strong>
+            <small>Play in your browser</small>
+            <strong>Play {{ game.title }}</strong><span class="visually-hidden"> (opens in a new tab)</span>
           </span>
         </a>
-        {% endif %}
-
-        {% if page.website_link %}
-        <a href="{{ page.website_link }}" class="platform-badge web" target="_blank" rel="noopener">
-          <span class="platform-icon">🌐</span>
+        {%- endif %}
+        {%- if game.help_build_url and game.help_build_url != "" %}
+        <a href="{{ game.help_build_url }}" class="platform-badge help" target="_blank" rel="noopener">
+          <span class="platform-icon" aria-hidden="true">✎</span>
           <span class="platform-text">
-            <small>Play on</small>
-            <strong>Web</strong>
+            <small>Share ideas and vote</small>
+            <strong>Help build it</strong><span class="visually-hidden"> (opens in a new tab)</span>
           </span>
         </a>
-        {% endif %}
+        {%- endif %}
       </div>
     </div>
   </section>
@@ -55,7 +62,8 @@ layout: default
       <div class="screenshots-grid">
         {% for screenshot in page.screenshots %}
         <div class="screenshot-item">
-          <img src="{{ screenshot | relative_url }}" alt="{{ page.title }} screenshot">
+          {%- capture default_alt %}Screenshot of {{ page.title }}{% endcapture %}
+          <img src="{{ screenshot.src | default: screenshot | relative_url }}" alt="{{ screenshot.alt | default: default_alt }}" loading="lazy">
         </div>
         {% endfor %}
       </div>

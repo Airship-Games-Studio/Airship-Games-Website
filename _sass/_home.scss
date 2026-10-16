@@ -389,6 +389,30 @@
   }
 }
 
+.game-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: 0 $spacing-md $spacing-md;
+  background: $color-parchment;
+
+  .btn {
+    text-align: center;
+  }
+
+  .game-card-link {
+    margin: 0 (-$spacing-md) (-$spacing-md);
+  }
+}
+
+.game-card-badge.status-in-development {
+  background: linear-gradient(135deg, $color-copper 0%, $color-sepia 100%);
+}
+
+.game-card-badge.status-coming-soon {
+  background: $color-sepia-dark;
+}
+
 // About Section (Homepage)
 .about-section {
   padding: $spacing-xl 0;

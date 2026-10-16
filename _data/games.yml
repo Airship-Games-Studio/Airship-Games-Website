@@ -1,0 +1,21 @@
+# One entry per game. The home page, header, footer and site map all read this
+# file, sorted by `order`. See "Publishing a game" in README.md.
+#
+# status: play-now | in-development | coming-soon
+# play_url, help_build_url: optional. A button is shown only when its URL is set.
+# help_build_url stays empty until that game's Feedback is live in production.
+# page: true when /games/<slug>/ exists.
+
+- slug: dimsum-defender
+  title: Dim Sum Defender
+  tagline: Run a dim sum restaurant and keep the carts moving.
+  summary: >-
+    A cozy 3D restaurant game. Lay out your dining room, seat hungry parties
+    and send dim sum carts around the floor before the food goes cold.
+  status: play-now
+  platforms: [Web]
+  card_image: /assets/images/games/dimsum-defender.png
+  play_url: https://dimsumdefender.com
+  help_build_url: ""
+  page: true
+  order: 1
