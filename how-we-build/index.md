@@ -15,9 +15,9 @@ Every game we publish is free to play in your browser. Many are early versions, 
 
 Each game will have a **Feedback** button. On desktop it sits at the bottom left of the setup and results screens, and stays out of the way while you play. It opens a panel beside the game. We call the system behind it **Aerodrome**. Feedback is starting with Dim Sum Defender.
 
-## 3. React, discuss and suggest
+## 3. Discuss and suggest
 
-In the panel you can see what other players are saying, react, join a discussion, or post an idea of your own. You don't need a polished solution: "this felt unfair" or "I wish I could…" is enough. Reading is open to everyone; to post you sign in with Google.
+In the panel you can see what other players are saying, join a discussion, or post an idea of your own. You don't need a polished solution: "this felt unfair" or "I wish I could…" is enough. Reading is open to everyone; to post you sign in with Google.
 
 ## 4. Vote, and watch the roadmap
 
