@@ -54,52 +54,10 @@ description: Embark on extraordinary adventures with Airship Games. Experience t
     </p>
 
     <div class="games-grid">
-      <!-- Quirks Game Card -->
-      <article class="game-card">
-        <div class="game-card-image">
-          <img src="{{ '/assets/images/fantastic_airships/Personal_Blimp.png' | relative_url }}" alt="Quirks Game">
-          <div class="game-card-overlay">
-            <span class="game-card-badge">Android</span>
-          </div>
-        </div>
-        <div class="game-card-content">
-          <h3 class="game-card-title">Quirks</h3>
-          <p class="game-card-description">
-            Discover a world of delightful peculiarities in this charming Android game.
-            Embrace the quirky and embark on an adventure unlike any other.
-          </p>
-          <div class="game-card-platforms">
-            <span class="platform-tag">Android</span>
-          </div>
-        </div>
-        <a href="{{ '/games/quirks/' | relative_url }}" class="game-card-link">
-          Learn More →
-        </a>
-      </article>
-
-      <!-- Megosi Game Card -->
-      <article class="game-card">
-        <div class="game-card-image">
-          <img src="{{ '/assets/images/fantastic_airships/Ringworld.png' | relative_url }}" alt="Megosi Game">
-          <div class="game-card-overlay">
-            <span class="game-card-badge">Multi-Platform</span>
-          </div>
-        </div>
-        <div class="game-card-content">
-          <h3 class="game-card-title">Megosi</h3>
-          <p class="game-card-description">
-            Journey through breathtaking landscapes and uncover ancient mysteries.
-            Available on web and Android for adventurers everywhere.
-          </p>
-          <div class="game-card-platforms">
-            <span class="platform-tag">Web</span>
-            <span class="platform-tag">Android</span>
-          </div>
-        </div>
-        <a href="{{ '/games/megosi/' | relative_url }}" class="game-card-link">
-          Learn More →
-        </a>
-      </article>
+      {%- assign games = site.data.games | sort: 'order' -%}
+      {%- for game in games %}
+      {% include game-card.html game=game %}
+      {%- endfor %}
     </div>
   </div>
 </section>

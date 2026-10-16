@@ -1,0 +1,27 @@
+{%- assign game = include.game -%}
+{%- capture game_url %}/games/{{ game.slug }}/{% endcapture -%}
+<article class="game-card">
+  <div class="game-card-image">
+    <img src="{{ game.card_image | relative_url }}" alt="" loading="lazy">
+    <div class="game-card-overlay">
+      <span class="game-card-badge status-{{ game.status }}">{% include game-status.html status=game.status %}</span>
+    </div>
+  </div>
+  <div class="game-card-content">
+    <h3 class="game-card-title">{{ game.title }}</h3>
+    <p class="game-card-description">{{ game.summary }}</p>
+    <div class="game-card-platforms">
+      {%- for platform in game.platforms %}
+      <span class="platform-tag">{{ platform }}</span>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="game-card-actions">
+    {%- if game.play_url and game.play_url != "" %}
+    <a href="{{ game.play_url }}" class="btn btn-primary" target="_blank" rel="noopener">Play<span class="visually-hidden"> {{ game.title }} (opens in a new tab)</span></a>
+    {%- endif %}
+    {%- if game.page %}
+    <a href="{{ game_url | relative_url }}" class="game-card-link">More about {{ game.title }} →</a>
+    {%- endif %}
+  </div>
+</article>

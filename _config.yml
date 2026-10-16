@@ -4,7 +4,7 @@ description: >-
   Embark on extraordinary adventures with Airship Games.
   Experience the golden age of exploration through our unique gaming experiences.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://airshipgames.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -44,6 +44,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - AGENTS.md
+  - scripts
   - LICENSE
   - vendor
 

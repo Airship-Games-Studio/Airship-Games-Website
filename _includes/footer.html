@@ -11,8 +11,10 @@
       <div class="footer-games">
         <h4>Our Games</h4>
         <ul>
-          <li><a href="{{ '/games/quirks/' | relative_url }}">Quirks</a></li>
-          <li><a href="{{ '/games/megosi/' | relative_url }}">Megosi</a></li>
+          {%- assign footer_games = site.data.games | sort: 'order' -%}
+          {%- for game in footer_games %}
+          <li>{% if game.page %}<a href="{{ '/games/' | append: game.slug | append: '/' | relative_url }}">{{ game.title }}</a>{% else %}{{ game.title }}{% endif %}</li>
+          {%- endfor %}
         </ul>
       </div>
 
@@ -29,7 +31,7 @@
         <ul>
           <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
           <li><a href="{{ '/terms/' | relative_url }}">Terms of Service</a></li>
-          <li><a href="{{ '/toc/' | relative_url }}">Table of Contents</a></li>
+          <li><a href="{{ '/toc/' | relative_url }}">Site map</a></li>
         </ul>
       </div>
     </div>
