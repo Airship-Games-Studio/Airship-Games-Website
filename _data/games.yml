@@ -19,3 +19,45 @@
   help_build_url: ""
   page: true
   order: 1
+
+- slug: function-skatepark
+  title: Function Skatepark
+  tagline: Build a skate park out of polynomials, then ride it.
+  summary: >-
+    Write piecewise polynomial functions and the graph becomes your skate park.
+    Then drop a board onto the curves and ride them with ollies, flips and grinds.
+  status: coming-soon
+  platforms: [Web, Touch]
+  card_image: /assets/images/games/function-skatepark.png
+  play_url: ""
+  help_build_url: ""
+  page: true
+  order: 2
+
+- slug: browser-wars
+  title: Browser Wars
+  tagline: Fly a ship through the whitespace of live Wikipedia articles.
+  summary: >-
+    Paragraphs become solid blocks and links become whirlpools that warp you to
+    the next article. Dodge, shoot, bomb text into redaction and keep flying.
+  status: coming-soon
+  platforms: [Web, Touch]
+  card_image: /assets/images/games/browser-wars.png
+  play_url: ""
+  help_build_url: ""
+  page: true
+  order: 3
+
+- slug: rampage-sandbox
+  title: Rampage Sandbox
+  tagline: Sculpt a red-rock mountain, set your line, and drop in on a bike.
+  summary: >-
+    Shape a desert mountain, place a start and finish, then ride it with jumps,
+    flips and spins. Land clean to bank points; crash and you ragdoll.
+  status: coming-soon
+  platforms: [Desktop browser]
+  card_image: /assets/images/games/rampage-sandbox.jpg
+  play_url: ""
+  help_build_url: ""
+  page: true
+  order: 4

@@ -2,15 +2,15 @@
   <div class="header-ornament top"></div>
   <nav class="main-nav container">
     <a href="{{ '/' | relative_url }}" class="logo">
-      <span class="logo-icon">✧</span>
+      <span class="logo-icon" aria-hidden="true">✧</span>
       <span class="logo-text">{{ site.title }}</span>
     </a>
 
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
       <span class="hamburger"></span>
     </button>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
       {%- assign nav_games = site.data.games | sort: 'order' -%}
       {%- for game in nav_games -%}
@@ -19,7 +19,8 @@
       <li><a href="{{ game_url | relative_url }}" {% if page.url == game_url %}class="active"{% endif %}>{{ game.title }}</a></li>
       {%- endif -%}
       {%- endfor %}
-      <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>About</a></li>
+      <li><a href="{{ '/how-we-build/' | relative_url }}" {% if page.url == '/how-we-build/' %}class="active"{% endif %}>How we build</a></li>
+      <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a></li>
     </ul>
   </nav>
   <div class="header-ornament bottom"></div>

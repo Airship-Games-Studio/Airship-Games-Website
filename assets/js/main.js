@@ -1,14 +1,17 @@
 // Airship Games - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Mobile Navigation Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function() {
-      navToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+      const open = navLinks.classList.toggle('active');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     // Close menu when clicking on a link
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function() {
         navToggle.classList.remove('active');
         navLinks.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -27,9 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         target.scrollIntoView({
-          behavior: 'smooth',
+          behavior: reduceMotion ? 'auto' : 'smooth',
           block: 'start'
         });
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
       }
     });
   });
@@ -38,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const parallaxBg = document.querySelector('.parallax-bg');
   const heroDecors = document.querySelectorAll('.hero-decor');
 
-  if (parallaxBg || heroDecors.length > 0) {
+  if (!reduceMotion && (parallaxBg || heroDecors.length > 0)) {
     window.addEventListener('scroll', function() {
       const scrolled = window.pageYOffset;
       const rate = scrolled * 0.3;
@@ -88,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, observerOptions);
 
   // Observe game cards, feature cards, and decorative items
-  document.querySelectorAll('.game-card, .feature-card, .screenshot-item, .decor-item, .feature-showcase').forEach(function(el) {
+  if (!reduceMotion) document.querySelectorAll('.game-card, .feature-card, .screenshot-item, .decor-item, .feature-showcase').forEach(function(el) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

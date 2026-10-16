@@ -17,9 +17,10 @@
   {% seo %}
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   {% include header.html %}
 
-  <main class="main-content">
+  <main class="main-content" id="main" tabindex="-1">
     {{ content }}
   </main>
 

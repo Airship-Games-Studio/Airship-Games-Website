@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="privacy-page">
+  <header class="page-header">
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      {%- if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+      {%- endif %}
+    </div>
+  </header>
+
+  <section class="privacy-content">
+    <div class="container">
+      <div class="privacy-main policy-text page-text">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</div>

@@ -151,14 +151,18 @@
     right: 0;
     flex-direction: column;
     background: $color-sepia-dark;
-    padding: $spacing-md;
+    padding: 0 $spacing-md;
     gap: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height $transition-normal;
+    visibility: hidden;
+    transition: max-height $transition-normal, padding $transition-normal, visibility 0s linear $transition-normal;
 
     &.active {
-      max-height: 300px;
+      max-height: 80vh;
+      padding: $spacing-md;
+      visibility: visible;
+      transition: max-height $transition-normal, padding $transition-normal;
     }
 
     a {

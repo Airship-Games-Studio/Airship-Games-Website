@@ -1,8 +1,8 @@
 # Site settings
 title: Airship Games
 description: >-
-  Embark on extraordinary adventures with Airship Games.
-  Experience the golden age of exploration through our unique gaming experiences.
+  Airship Games makes small games in the open and builds them with their players.
+  Play free in your browser, share ideas and vote on what we build next.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://airshipgames.com" # the base hostname & protocol for your site
 
@@ -33,6 +33,7 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+      image: /assets/images/social-default.jpg
   - scope:
       path: ""
       type: "games"
