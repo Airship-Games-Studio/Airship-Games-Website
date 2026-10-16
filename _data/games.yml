@@ -40,10 +40,10 @@
   summary: >-
     Paragraphs become solid blocks and links become whirlpools that warp you to
     the next article. Dodge, shoot, bomb text into redaction and keep flying.
-  status: coming-soon
+  status: play-now
   platforms: [Web, Touch]
   card_image: /assets/images/games/browser-wars.png
-  play_url: ""
+  play_url: https://browserwars.airshipgames.com
   help_build_url: ""
   page: true
   order: 3
