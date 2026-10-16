@@ -294,3 +294,68 @@
   }
 }
 
+
+// Markdown policy pages (_layouts/policy.html)
+.policy-text {
+  h2 {
+    color: $color-navy-dark;
+    font-size: 1.8rem;
+    margin: $spacing-xl 0 $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $color-gold;
+    scroll-margin-top: 100px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p,
+  li,
+  td,
+  th {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $color-charcoal;
+  }
+
+  p {
+    margin-bottom: $spacing-md;
+  }
+
+  ul,
+  ol {
+    margin: $spacing-md 0;
+    padding-left: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-xs;
+    }
+  }
+
+  a {
+    color: $color-bronze;
+    font-weight: 600;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: $spacing-md 0 $spacing-lg;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    padding: $spacing-sm;
+    border-bottom: 1px solid rgba($color-sepia-light, 0.5);
+  }
+
+  th {
+    background: $color-parchment;
+    color: $color-navy-dark;
+  }
+}
