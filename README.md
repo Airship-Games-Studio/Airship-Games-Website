@@ -21,7 +21,7 @@ ruby scripts/check_site.rb
 ## Publishing a game
 
 1. Add an entry to `_data/games.yml`. The home page, header, footer and site map all read this file, sorted by `order`. Use `status: coming-soon` until the game is playable at its `play_url`.
-2. Add the game page at `games/<slug>/index.html` with `layout: game` and `game: <slug>`, and set `page: true` in its data entry.
+2. Add the game page at `games/<slug>/index.md` (Markdown, so "How to play" renders) with `layout: game` and `game: <slug>`, and set `page: true` in its data entry.
 3. Add a 1200×630 screenshot at `assets/images/games/<slug>.png`. It's the card image, the page hero and the social preview.
 4. If the game has Feedback, register it in the Aerodrome game registry too. Set `help_build_url` (`https://<game>.airshipgames.com/?aerodrome=open`) only once that game's Feedback is live in production.
 
