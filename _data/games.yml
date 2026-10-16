@@ -54,10 +54,10 @@
   summary: >-
     Shape a desert mountain, place a start and finish, then ride it with jumps,
     flips and spins. Land clean to bank points; crash and you ragdoll.
-  status: coming-soon
+  status: in-development
   platforms: [Desktop browser]
   card_image: /assets/images/games/rampage-sandbox.jpg
-  play_url: ""
+  play_url: https://rampage.airshipgames.com
   help_build_url: ""
   page: true
   order: 4
