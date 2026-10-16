@@ -25,7 +25,7 @@ Players vote on ideas, and the votes set our default priorities. Each game's roa
 
 ## 5. What happens to your posts
 
-Your posts, replies and ideas are public, with the display name you choose, and we may quote them when the game changes because of them. You can delete your account, with or without your posts, at any time from the panel. The [Privacy Policy]({{ '/privacy/' | relative_url }}) explains what we keep and for how long, and the [Community Rules]({{ '/community-rules/' | relative_url }}) explain how to take part: criticize the game, respect people, protect privacy, and don't manipulate votes.
+Your posts, replies and ideas are public, with the display name you choose, and we may quote them when the game changes because of them. You can delete your account, with or without your posts, at any time from the panel, or ask us to remove a single post. The [Privacy Policy]({{ '/privacy/' | relative_url }}) explains what we keep and for how long, and the [Community Rules]({{ '/community-rules/' | relative_url }}) explain how to take part: criticize the game, respect people, protect privacy, and don't manipulate votes.
 
 ## 6. Credits (coming later)
 
