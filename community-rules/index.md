@@ -37,7 +37,7 @@ Discussion and votes set the default priorities for what we build next. We expla
 
 ## Reporting and review {#reporting}
 
-Use **Report** on a post or idea that breaks these rules, or email [contact@airshipgames.com](mailto:contact@airshipgames.com) about a privacy problem or to ask us to review a decision. Feedback isn't an emergency service.
+Use **Report** on a post or idea that breaks these rules, email [privacy@airshipgames.com](mailto:privacy@airshipgames.com) about a privacy problem, or [contact@airshipgames.com](mailto:contact@airshipgames.com) to ask us to review a decision. Feedback isn't an emergency service.
 
 While we look at a report we may hide the content. Depending on what happened we may remove it, warn the author, limit posting or suspend the account, and where practical we'll say which rule applied. Serious threats, exposed personal information or active abuse may be removed straight away.
 

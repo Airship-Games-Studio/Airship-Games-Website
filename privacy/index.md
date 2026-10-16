@@ -73,9 +73,9 @@ The Feedback panel lets you read what other players are saying, post, reply, pro
 | **Your profile:** display name (it starts as your Google name, or the first part of your email address if there is none, and you can change it in **Account**), role (player, editor or admin), account status, and when you confirmed the age and public-posting notice. | To show who wrote what, decide what you're allowed to do, and record that you saw the notice. |
 | **Your contributions:** posts, replies, ideas, votes and reports, with times and the game they belong to. | To run the discussion and voting, and to decide what to build next. |
 | **Sign-in session:** an essential, secure cookie that keeps you signed in for up to 30 days, plus security tokens. | To keep you signed in and protect your actions from forgery. |
-| **In-panel storage:** unsent drafts, a random tab ID and the game's hostname, kept in your browser's session storage until you close the tab. | So a draft survives signing in, and to count visits without identifying you. |
+| **Browser storage:** a random tab ID in the game page's session storage, and unsent drafts, the tab ID and the game's hostname in the panel's session storage, all cleared when you close the tab. | So a draft survives signing in, and to count visits without identifying you. |
 | **Usage events:** which game and panel version, the page's hostname, the event (for example "panel opened" or "idea posted") and its time, a random per-tab ID, the panel section or game you went to, and whether you were signed in, staff or testing. | To see whether Feedback is used and working. Events never include your posts, email, name, player ID or game state. |
-| **Moderation records:** reports, the reported content, and actions editors take. | To deal with abuse and keep a record of decisions. |
+| **Moderation records:** reports (a reason and a link to the reported post), and actions editors take. | To deal with abuse and keep a record of decisions. |
 | **Diagnostic logs:** request details such as IP address, browser and errors, kept by our host. | To run, debug and secure the service. |
 
 We don't offer screenshot uploads, community credits or AI summaries yet. We'll update this policy before any of them launch.
@@ -107,7 +107,7 @@ These are the longest we keep each kind of information. We delete it sooner when
 | Diagnostic and security logs | 30 days, unless needed to investigate a specific incident. |
 | Moderation reports and action records | 12 months after the report is resolved. |
 | Sign-in sessions | Removed once they expire (at most 30 days) or a day after you sign out. |
-| Database backups | Our host keeps restore points for up to 30 days, so deleted information may stay in a backup for that long. If we ever restore one, we delete it again. |
+| Database backups | Our host keeps restore points for 7 days, so deleted information may stay in a backup for that long. If we ever restore one, we delete it again. |
 
 ## Deleting your account {#deletion}
 
