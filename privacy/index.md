@@ -44,7 +44,7 @@ Airship Games is the trading name of **Ministry of Product LLC**, a Washington l
 ## The short version {#summary}
 
 - You can play our games without an account. We don't run ads, sell personal information, or use tracking cookies.
-- If you sign in to Feedback, we get your Google account ID, email address and name from Google, and you choose a public display name.
+- If you sign in to Feedback, we get your Google account ID, email address and name from Google. Your public display name starts as your Google name (or the first part of your email address), and you can change it any time in **Account**.
 - Posts, replies, ideas and your display name are public. Vote totals are public; who voted is not.
 - You can delete your Feedback account yourself, with or without your posts, from the Account tab in the panel.
 - We don't run AI on your posts and don't use them to train AI models. We'll update this policy before that ever changes.
@@ -61,7 +61,7 @@ Our web games run in your browser and don't need an account.
 - **Hosting.** Game sites are served by Cloudflare, which processes your IP address and browser details to deliver and protect them. Cloudflare may produce cookieless, aggregate visit counts for these sites. We don't use them to identify anyone.
 - **Fonts.** Some games load fonts from Google Fonts, so Google receives your IP address and browser details.
 - **Browser Wars** loads live articles from Wikipedia. Your browser requests them directly from the Wikimedia Foundation, which receives your IP address and the articles requested under [its own privacy policy](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy).
-- **Help Build the Game.** When you click this link on a brand domain such as dimsumdefender.com, we count the click as an anonymous event (game, hostname and time only).
+- **Help Build the Game.** When you click this link on a brand domain such as dimsumdefender.com, we count the click as an anonymous event (game, hostname and time, plus flags that mark staff and test traffic).
 
 ## Feedback (Aerodrome) {#feedback}
 
@@ -70,11 +70,11 @@ The Feedback panel lets you read what other players are saying, post, reply, pro
 | What | Why |
 | --- | --- |
 | **Google sign-in:** your Google account ID, email address and name. We never see your Google password. | To create your account, sign you in and prevent abuse. |
-| **Your profile:** display name, role (player, editor or admin), account status, and when you confirmed the age and public-posting notice. | To show who wrote what, decide what you're allowed to do, and record that you saw the notice. |
+| **Your profile:** display name (it starts as your Google name, or the first part of your email address if there is none, and you can change it in **Account**), role (player, editor or admin), account status, and when you confirmed the age and public-posting notice. | To show who wrote what, decide what you're allowed to do, and record that you saw the notice. |
 | **Your contributions:** posts, replies, ideas, votes and reports, with times and the game they belong to. | To run the discussion and voting, and to decide what to build next. |
 | **Sign-in session:** an essential, secure cookie that keeps you signed in for up to 30 days, plus security tokens. | To keep you signed in and protect your actions from forgery. |
 | **In-panel storage:** unsent drafts, a random tab ID and the game's hostname, kept in your browser's session storage until you close the tab. | So a draft survives signing in, and to count visits without identifying you. |
-| **Usage events:** which game and panel version, the page's hostname, the event (for example "panel opened" or "idea posted") and its time, a random per-tab ID, the panel section or game you went to, and whether you were signed in. | To see whether Feedback is used and working. Events never include your posts, email, name, player ID or game state. |
+| **Usage events:** which game and panel version, the page's hostname, the event (for example "panel opened" or "idea posted") and its time, a random per-tab ID, the panel section or game you went to, and whether you were signed in, staff or testing. | To see whether Feedback is used and working. Events never include your posts, email, name, player ID or game state. |
 | **Moderation records:** reports, the reported content, and actions editors take. | To deal with abuse and keep a record of decisions. |
 | **Diagnostic logs:** request details such as IP address, browser and errors, kept by our host. | To run, debug and secure the service. |
 
@@ -113,8 +113,8 @@ These are the longest we keep each kind of information. We delete it sooner when
 
 In the Feedback panel, open **Account** and choose one of:
 
-- **Delete my account.** We sign you out everywhere, remove your email, Google ID and votes, and show your remaining posts as "Deleted player". If a post itself identifies you, ask us to remove it too.
-- **Delete my account and contributions.** We also delete your posts, replies and ideas. Where others replied to your post, a content-free "[deleted]" placeholder keeps their replies readable. An idea other players worked on keeps its title but loses your text.
+- **Delete my account, keep my posts.** We sign you out everywhere, remove your email, Google ID and votes, and show your remaining posts as "Deleted player". If a post itself identifies you, ask us to remove it too.
+- **Delete my account and my posts.** We also delete your posts, replies and ideas. Where others replied to your post, a content-free "[deleted]" placeholder keeps their replies readable. An idea that other players voted for, that is on the roadmap, or that other ideas were merged into keeps its title but loses your text.
 
 Deletion happens immediately. Signing in again later creates a new, empty account. You can also ask us to remove a single post without closing your account. Deleting feedback doesn't undo changes already made to a game.
 
@@ -124,7 +124,7 @@ Email [privacy@airshipgames.com](mailto:privacy@airshipgames.com) to ask for a c
 
 ## Automated replies {#automated}
 
-Acknowledgements and status messages we send about your feedback, reports and requests are automated, and say so. An automated acknowledgement means we've received something, not that a person has reviewed it or that the request is complete.
+Confirmations the service shows you, for example after you report a post or delete your account, are automated. If we add automated acknowledgements for email requests, they will say so. An automated confirmation means we've received something, not that a person has reviewed it. Replies from editors in a discussion are written by people.
 
 ## Age requirements {#age}
 

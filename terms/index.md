@@ -73,11 +73,11 @@ Your posts are public. Only post things you have the right to share, and don't p
 
 **Ideas, not assets.** Describe what you'd like changed; don't send us code, art, music or writing expecting us to put it in a game. If we want to use something you made, we'll agree separate terms first.
 
-When you delete a post or your account, we remove it as described in the Privacy Policy. Our permission then ends, except for changes already made to a game and its release notes.
+When you delete a post, or delete your account together with your posts, we remove it as described in the Privacy Policy, and our permission for that content ends, except for changes already made to a game and its release notes. If you delete your account but keep your posts, they stay public under "Deleted player" and this permission continues for them.
 
 ## Ideas, votes and the roadmap {#ideas}
 
-Player reactions and votes set the default priorities for what we build next. We stay responsible for each game's direction, and we may choose differently for reasons such as the game's identity, safety, the law, cost or technical limits. When we depart from what players clearly asked for, we'll say why. A vote or a place on the roadmap isn't a promise that something will be built, built as described, or delivered by a particular date.
+Player discussion and votes set the default priorities for what we build next. We stay responsible for each game's direction, and we may choose differently for reasons such as the game's identity, safety, the law, cost or technical limits. When we depart from what players clearly asked for, we'll say why. A vote or a place on the roadmap isn't a promise that something will be built, built as described, or delivered by a particular date.
 
 Taking part doesn't make you an employee, partner or owner of a game, and isn't paid.
 
@@ -89,7 +89,7 @@ Don't scrape Feedback, use bots, or access it except through the panel and our p
 
 ## Automated replies {#automated}
 
-Acknowledgements, replies and status messages from the service are automated, and say so. An automated message isn't a personal review by our team, and doesn't by itself decide a moderation appeal.
+Confirmations the service shows you, such as after a report or an account deletion, are automated. An automated confirmation isn't a personal review by our team, and doesn't by itself decide a moderation appeal. Replies from editors in a discussion are written by people.
 
 ## Our games and content {#ownership}
 

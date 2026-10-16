@@ -33,7 +33,7 @@ Tell us what happened, what felt good or bad, or what you wish worked differentl
 
 ## How feedback becomes development {#development}
 
-Reactions and votes set the default priorities for what we build next. We explain significant departures, for example when a request would change what the game is, or isn't safe, legal, affordable or technically possible. We don't remove criticism because it's inconvenient. Votes on ideas are separate from moderation: a low vote count is never a rule violation.
+Discussion and votes set the default priorities for what we build next. We explain significant departures, for example when a request would change what the game is, or isn't safe, legal, affordable or technically possible. We don't remove criticism because it's inconvenient. Votes on ideas are separate from moderation: a low vote count is never a rule violation.
 
 ## Reporting and review {#reporting}
 
@@ -41,7 +41,7 @@ Use **Report** on a post or idea that breaks these rules, or email [contact@airs
 
 While we look at a report we may hide the content. Depending on what happened we may remove it, warn the author, limit posting or suspend the account, and where practical we'll say which rule applied. Serious threats, exposed personal information or active abuse may be removed straight away.
 
-Acknowledgements and status messages are automated and say so. They aren't a personal review.
+Confirmations the panel shows you, such as after a report, are automated. They aren't a personal review.
 
 ## Changes {#changes}
 
