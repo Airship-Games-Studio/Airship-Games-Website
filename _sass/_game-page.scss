@@ -234,6 +234,30 @@
 
   .game-version {
     font-size: 0.85rem;
-    opacity: 0.85;
+    color: $color-cream;
   }
+}
+
+.game-content table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: $spacing-md 0;
+
+  th,
+  td {
+    text-align: left;
+    padding: $spacing-xs $spacing-sm;
+    border-bottom: 1px solid rgba($color-sepia-light, 0.5);
+  }
+
+  th {
+    background: $color-parchment;
+  }
+}
+
+.game-coming-soon {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
 }

@@ -36,6 +36,9 @@ layout: default
           </span>
         </a>
         {%- endif %}
+        {%- if game.status == 'coming-soon' %}
+        <p class="game-coming-soon">Coming soon: we're getting {{ game.title }} ready to play.</p>
+        {%- endif %}
         {%- if game.help_build_url and game.help_build_url != "" %}
         <a href="{{ game.help_build_url }}" class="platform-badge help" target="_blank" rel="noopener">
           <span class="platform-icon" aria-hidden="true">✎</span>

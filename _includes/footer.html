@@ -3,9 +3,9 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <span class="logo-icon">✧</span>
+        <span class="logo-icon" aria-hidden="true">✧</span>
         <span class="logo-text">{{ site.title }}</span>
-        <p class="footer-tagline">Adventures await in the skies</p>
+        <p class="footer-tagline">Games built with their players</p>
       </div>
 
       <div class="footer-games">
@@ -21,7 +21,8 @@
       <div class="footer-links">
         <h4>Connect</h4>
         <ul>
-          <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+          <li><a href="{{ '/how-we-build/' | relative_url }}">How we build games</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About us</a></li>
           <li><a href="mailto:contact@airshipgames.com">Contact</a></li>
         </ul>
       </div>
@@ -40,7 +41,7 @@
     <div class="footer-bottom">
       <div class="decorative-line"></div>
       <p class="copyright">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-      <p class="footer-motto">Crafting adventures since the golden age</p>
+      <p class="footer-motto">Ministry of Product LLC, doing business as Airship Games</p>
     </div>
   </div>
 </footer>
