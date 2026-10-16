@@ -32,7 +32,7 @@ layout: default
           <span class="platform-icon" aria-hidden="true">▶</span>
           <span class="platform-text">
             <small>Play in your browser</small>
-            <strong>Play {{ game.title }}</strong>
+            <strong>Play {{ game.title }}</strong><span class="visually-hidden"> (opens in a new tab)</span>
           </span>
         </a>
         {%- endif %}
@@ -41,7 +41,7 @@ layout: default
           <span class="platform-icon" aria-hidden="true">✎</span>
           <span class="platform-text">
             <small>Share ideas and vote</small>
-            <strong>Help build it</strong>
+            <strong>Help build it</strong><span class="visually-hidden"> (opens in a new tab)</span>
           </span>
         </a>
         {%- endif %}
@@ -62,7 +62,8 @@ layout: default
       <div class="screenshots-grid">
         {% for screenshot in page.screenshots %}
         <div class="screenshot-item">
-          <img src="{{ screenshot.src | default: screenshot | relative_url }}" alt="{{ screenshot.alt | default: 'Screenshot of ' | append: page.title }}" loading="lazy">
+          {%- capture default_alt %}Screenshot of {{ page.title }}{% endcapture %}
+          <img src="{{ screenshot.src | default: screenshot | relative_url }}" alt="{{ screenshot.alt | default: default_alt }}" loading="lazy">
         </div>
         {% endfor %}
       </div>

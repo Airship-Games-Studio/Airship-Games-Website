@@ -16,7 +16,7 @@ pages = Dir.glob(File.join(site, "**", "*.html"))
 pages.each do |page|
   html = File.read(page)
   rel = page.delete_prefix("#{site}/")
-  html.scan(/\b(?:href|src)="([^"]*)"/i).flatten.each do |url|
+  html.scan(/(?<![-\w])(?:href|src)\s*=\s*(?:"([^"]*)"|'([^']*)')/i).map(&:compact).flatten.each do |url|
     if url == "#" || url.empty?
       errors << "#{rel}: placeholder link #{url.inspect}"
     elsif url.start_with?("/") && !url.start_with?("//")
@@ -27,7 +27,7 @@ pages.each do |page|
     end
   end
   html.scan(/<img\b[^>]*>/i).each do |img|
-    errors << "#{rel}: image without alt: #{img[0, 120]}" unless img.match?(/\balt=/i)
+    errors << "#{rel}: image without alt: #{img[0, 120]}" unless img.match?(/(?<![-\w])alt=/i)
   end
 end
 
