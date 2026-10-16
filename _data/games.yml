@@ -26,10 +26,10 @@
   summary: >-
     Write piecewise polynomial functions and the graph becomes your skate park.
     Then drop a board onto the curves and ride them with ollies, flips and grinds.
-  status: coming-soon
+  status: play-now
   platforms: [Web, Touch]
   card_image: /assets/images/games/function-skatepark.png
-  play_url: ""
+  play_url: https://skatepark.airshipgames.com
   help_build_url: ""
   page: true
   order: 2
