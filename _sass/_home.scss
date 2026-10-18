@@ -272,6 +272,10 @@
 }
 
 .game-card {
+  // A column, so cards in a grid row line up: the text area takes the spare
+  // height and the platform tags and buttons sit at the bottom of every card.
+  display: flex;
+  flex-direction: column;
   background: $color-white;
   border-radius: $radius-lg;
   overflow: hidden;
@@ -338,6 +342,9 @@
 }
 
 .game-card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
   padding: $spacing-md;
   background: linear-gradient(180deg, $color-white 0%, $color-parchment 100%);
 }
@@ -359,6 +366,7 @@
   display: flex;
   gap: $spacing-xs;
   flex-wrap: wrap;
+  margin-top: auto;
 
   .platform-tag {
     padding: $spacing-xs $spacing-sm;
