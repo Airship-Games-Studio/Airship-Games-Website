@@ -19,6 +19,8 @@ Each game will get a **Feedback** button. On desktop it sits at the bottom left 
 
 In the panel you'll be able to see what other players are saying, join a discussion, or post an idea of your own. You don't need a polished solution: "this felt unfair" or "I wish I could…" is enough. Reading is open to everyone; to post you sign in with Google.
 
+The community is in an invite-only beta. Anyone can read along; posting, comments and votes need an invite code from us.
+
 ## 4. Vote, and watch the roadmap
 
 Players vote on ideas, and the votes set our default priorities. Each game's roadmap will show what's planned, what's being built and what's shipped. When we choose differently from what players clearly asked for, for example because a change would alter what the game is, or isn't feasible, we'll say why.

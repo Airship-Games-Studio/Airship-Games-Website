@@ -2,8 +2,8 @@
 layout: policy
 title: Privacy Policy
 description: What Airship Games and its Feedback service collect, why, who can see it, how long we keep it, and how to delete it.
-effective: 2026-10-16
-last_updated: 2026-10-16
+effective: 2026-10-17
+last_updated: 2026-10-17
 toc_items:
   - id: who-we-are
     title: Who we are
@@ -71,6 +71,7 @@ The Feedback panel lets you read what other players are saying, post, reply, pro
 | --- | --- |
 | **Google sign-in:** your Google account ID, email address and name. We never see your Google password. | To create your account, sign you in and prevent abuse. |
 | **Your profile:** display name (it starts as your Google name, or the first part of your email address if there is none, and you can change it in **Account**), role (player, editor or admin), account status, and when you confirmed the age and public-posting notice. | To show who wrote what, decide what you're allowed to do, and record that you saw the notice. |
+| **Invite:** if you join a game's community with an invite code, which code you used and when. | To run the invite-only beta. It's deleted with your account. |
 | **Your contributions:** posts, replies, ideas, votes and reports, with times and the game they belong to. | To run the discussion and voting, and to decide what to build next. |
 | **Sign-in session:** an essential, secure cookie that keeps you signed in for up to 30 days, plus security tokens. | To keep you signed in and protect your actions from forgery. |
 | **Browser storage:** a random tab ID in the game page's session storage, and unsent drafts, the tab ID and the game's hostname in the panel's session storage, all cleared when you close the tab. | So a draft survives signing in, and to count visits without identifying you. |
@@ -138,7 +139,7 @@ We protect Feedback with secure cookies, encrypted connections, forgery protecti
 
 If we change this policy, we'll update the date at the top and add a line below. For a significant change, such as a new use of your information, we'll give notice in the Feedback panel before it takes effect, and ask for your agreement where the law requires it.
 
-**History:** October 16, 2026: first version covering Feedback (Aerodrome). Replaces the December 2025 policy.
+**History:** October 17, 2026: added invite codes for the invite-only beta. October 16, 2026: first version covering Feedback (Aerodrome). Replaces the December 2025 policy.
 
 ## Contact {#contact}
 
